@@ -1,0 +1,44 @@
+label {
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+.userForm {
+    text-align: center;
+    display: block;
+    margin: auto;
+    background-color: #ffffff;
+    max-width: 360px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+    border: 1px solid rgb(238, 238, 238);
+    box-shadow: rgb(196, 196, 196) 1px 2px 3px;
+    border-radius: 4px;
+}
+
+
+input{
+
+    border-radius: 4px;
+    border: solid rgb(221, 221, 221) 1px;
+    text-align: right;
+}
+
+textarea {
+    border-radius: 4px;
+    border: solid rgb(221, 221, 221) 1px;
+    text-align: right;
+    width: none;
+    max-width: 90%;
+}
+select{
+    border-radius: 4px;
+    border: solid rgb(221, 221, 221) 1px;
+}
+
+h1{
+    font-size: 20px;
+    padding: 10px 0px;
+    color: rgb(49, 46, 46);
+}

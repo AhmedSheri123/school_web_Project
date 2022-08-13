@@ -1,0 +1,44 @@
+.user-view-box {
+    width: 85%;
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    min-height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: rgb(203, 203, 203) 1px 2px 3px;
+    padding-bottom: 15px;
+}
+
+h1{
+    padding-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(67, 58, 58);
+}
+.radio-box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#custom-num {
+    display: block;
+
+    border: 1px rgb(185, 185, 185) solid;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+#custom-num-label {
+    margin-top: 15px;
+    padding-right: 10px;
+}
+
+#submit {
+    display: block;
+    margin: auto;
+}

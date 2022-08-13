@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/showUsers.css' %}">
+{% endblock %}
+
+<link rel="stylesheet" href="">
+
+{% block content %}
+
+<div class="table-box">
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">الاسم</th>
+            <th scope="col">اسم المدرسة</th>
+            <th scope="col">المرحلة</th>
+            <th scope="col">QR</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for U in UA %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{U.username}}</td>
+            <td>{{U.school}}</td>
+            <td>{{U.level}}</td>
+            <td><a href="{% url 'userViewer' U.id%}" type="button" class="btn btn-outline-primary">عرض</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+</div>
+
+{% endblock %}

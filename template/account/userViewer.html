@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/userViewer.css' %}">
+{% endblock %}
+
+{% block content %}
+<div dir="rtl" class="user-view-box">
+    <div class="title">عرض معلومات الطالب</div>
+    <div class="detailes">
+        <div>الطالب : {{U.username}}</div>
+    </div>
+    <div class="detailes">
+        <div>اسم المدرسة : {{U.school}}</div>
+    </div>
+    <div class="detailes">
+        <div>المرحلة : {{U.level.name}}</div>
+    </div>
+    <div class="detailes">
+        <div>المواليد : {{U.born}}</div>
+    </div>
+    <div class="detailes">
+        <div>رقم ولي الامر : {{U.GuardianNumber}}</div>
+    </div>
+    <div class="detailes">
+        <div>رقم مهم اخر : {{U.importentNumber}}</div>
+    </div>
+
+    <div dir="rtl" class="detailes">
+        <div>فصيلة الدم : {{U.blodType.blodTypeName}}</div>
+    </div>
+
+    
+
+    <div class="detailes">
+        <div>الامراض المزمنة</div>
+    </div>
+    <textarea style="margin-left: auto;" dir="rtl" class="detailes" disabled name="" id="" cols="30" rows="5">
+        {{U.diseases}}
+    </textarea>
+
+
+    <div class="detailes">
+        <div>ملاحظات مهمة</div>
+    </div>
+    <textarea style="margin-left: auto;" dir="rtl" class="detailes" disabled name="" id="" cols="30" rows="5">
+        {{U.note}}
+    </textarea>
+<div class="options-box">
+    <a href="{% url 'qrGen' U.id %}" type="button" class="btn btn-outline-primary options-items">QrCode توليد</a>
+    <a href="{% url 'getUserReport' U.id%}" type="button" class="btn btn-outline-primary options-items">سحب تقرير</a>
+    <a href="{% url 'getAllUserReport'%}" type="button" class="btn btn-outline-primary options-items">سحب تقرير لجميع الطلاب</a>
+</div>
+</div>
+{% endblock %}

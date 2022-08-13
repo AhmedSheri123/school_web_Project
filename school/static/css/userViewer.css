@@ -1,0 +1,41 @@
+.user-view-box {
+    width: 85%;
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    min-height: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: rgb(203, 203, 203) 1px 2px 3px;
+    padding-bottom: 15px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 0px;
+    color: rgb(62, 54, 54);
+    font-size: 20px;
+}
+.detailes {
+    text-align: right;
+    color: rgb(67, 63, 63);
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 10px;
+    display: block;
+    margin-right: 10px;
+    padding-top: 14px;
+}
+
+.options-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.options-items {
+    margin-top: 10px;
+}

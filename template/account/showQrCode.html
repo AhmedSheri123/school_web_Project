@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/showQr.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="tab"><strong>الطالب:</strong> {{U.username}}</div>
+
+<img src="/media/qr.png" alt="">
+<a class="download" href="/media/qr.png" download="{{U.username}}.png">تحميل</a>
+
+
+
+{% endblock %}

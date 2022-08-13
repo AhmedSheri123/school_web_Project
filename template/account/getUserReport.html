@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/getUserReport.css' %}">
+{% endblock %}
+
+{% block content %}
+<div dir="rtl" class="user-view-box">
+    <h1>اختر نوع التقرير</h1>
+    <div>
+        <form action="{% url 'getUserReport' id %}" method="post">
+            {% csrf_token %}<!--
+            <div class="radio-box">
+                    
+                <label for="day">يوم</label>
+                <input style="width: 20px; height: 20px;" checked type="radio" id="day" name="date-rang" value="1">
+
+                <label for="week">اسبوع</label>
+                <input style="width: 20px; height: 20px;" type="radio" id="week" name="date-rang" value="7">
+
+                <label for="month">شهر</label>
+                <input style="width: 20px; height: 20px;" type="radio" id="month" name="date-rang" value="30">
+
+                <label for="custom">مخصص</label>
+                <input style="width: 20px; height: 20px;" type="radio" id="custom" name="date-rang" value="12" >
+
+               
+            </div>
+            <label id="custom-num-label" for="custom-num">مخصص عدد الايام </label>
+            <input id="custom-num" type="number" value="1">
+
+-->
+            <div class="aa" style="display: flex; flex-wrap: wrap; flex-direction: column; align-items: center;">
+                <input id="custom-num" type="hidden" value="1">
+                <label style="font-weight: bold; font-size:20px" for="dateFrom">من</label>
+                <input required style="display: block;" type="date" name="dateFrom" id="dateFrom">
+                <input style="width: 20px; height: 20px;" checked type="hidden" id="day" name="date-rang" value="1">
+                <label style="font-weight: bold; font-size:20px" for="dateTo">الى</label>
+                <input required style="display: block;" type="date" name="dateTo" id="dateTo">
+                <div style="padding-top: 10px;"></div>
+                
+                
+            </div>
+            <div style="padding-top: 10px;"></div>
+
+
+            <input  type="submit" id="submit" class="btn btn-outline-primary" value="سحب تقرير" onclick="getDateRang()">
+        </form>
+    </div>
+    <script>
+        function getDateRang(){
+            var customValue = document.getElementById("custom-num").value;
+            document.getElementById("custom").value = customValue;
+            console.log(customValue)
+        }
+    </script>
+</div>
+{% endblock %}
